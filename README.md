@@ -45,3 +45,13 @@ Setiap service memiliki database PostgreSQL terpisah. Dalam implementasi berbasi
 Layanan seperti ReviewService dan CouponService menerima input berupa teks bebas dari pengguna. Jika input tersebut disimpan tanpa sanitasi dan kemudian ditampilkan kembali ke pengguna lain melalui SPA, maka sistem menjadi rentan terhadap serangan Stored XSS. Hal ini sangat berisiko terutama jika SPA tidak menerapkan penyandian (escape) pada saat render konten.
 
 ## Deliverable Individual
+
+**Fitur Melakukan Pemesanan Jasa Perbaikan Barang**
+
+Component Diagram
+
+![Component Diagram](images/order_component.png)
+
+Code Diagram
+
+![Code Diagram](images/order_code.png)
