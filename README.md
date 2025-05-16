@@ -32,12 +32,16 @@ Software Architecture
 
 ![Future Context Diagram](images/future_context.png)
 
+
 ## Deliverable G.3
 
 ### Risk Analysis untuk Arsitektur yang Diperbarui
 
 ### a. Risiko Skalabilitas
+Setiap service memiliki database PostgreSQL terpisah. Dalam implementasi berbasis Spring Boot, masing-masing service secara default membuka sejumlah koneksi aktif ke databasenya melalui connection pool. Ketika jumlah layanan bertambah dan permintaan meningkat, total koneksi ke semua database dapat melonjak dan menyebabkan saturasi resource, baik di sisi aplikasi maupun PostgreSQL. Akibatnya, sistem bisa mengalami timeout, bottleneck pada query, bahkan kegagalan layanan.
+
 
 ### b. Risiko Keamanan
+Layanan seperti ReviewService dan CouponService menerima input berupa teks bebas dari pengguna. Jika input tersebut disimpan tanpa sanitasi dan kemudian ditampilkan kembali ke pengguna lain melalui SPA, maka sistem menjadi rentan terhadap serangan Stored XSS. Hal ini sangat berisiko terutama jika SPA tidak menerapkan penyandian (escape) pada saat render konten.
 
 ## Deliverable Individual
