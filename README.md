@@ -1,7 +1,7 @@
 # advprog-module12
-Module 12 Advanced Programming 2024/2025
+**Module 12 Advanced Programming 2024/2025**
 
-Software Architecture
+**Software Architecture**
 
 **Kelompok A16**
 - Ghina Nabila Gunawan - 2206825914
@@ -37,22 +37,48 @@ Software Architecture
 
 ### Risk Analysis untuk Arsitektur yang Diperbarui
 
-### a. Risiko Skalabilitas
+**a. Risiko Skalabilitas**
 Setiap service memiliki database PostgreSQL terpisah. Dalam implementasi berbasis Spring Boot, masing-masing service secara default membuka sejumlah koneksi aktif ke databasenya melalui connection pool. Ketika jumlah layanan bertambah dan permintaan meningkat, total koneksi ke semua database dapat melonjak dan menyebabkan saturasi resource, baik di sisi aplikasi maupun PostgreSQL. Akibatnya, sistem bisa mengalami timeout, bottleneck pada query, bahkan kegagalan layanan.
 
 
-### b. Risiko Keamanan
+**b. Risiko Keamanan**
 Layanan seperti ReviewService dan CouponService menerima input berupa teks bebas dari pengguna. Jika input tersebut disimpan tanpa sanitasi dan kemudian ditampilkan kembali ke pengguna lain melalui SPA, maka sistem menjadi rentan terhadap serangan Stored XSS. Hal ini sangat berisiko terutama jika SPA tidak menerapkan penyandian (escape) pada saat render konten.
 
+
+---
+
 ## Deliverable Individual
+
 ### Haliza - Review
-Component diagram:
+
+**Component Diagram:**
+
 ![Review Component Diagram](images/review-container-diagram.drawio.png)
-Code diagram:
+
+**Code Diagram:**
+
 ![Review Code Diagram](images/review-code-diagram.png)
 
+---
+
 ### Kaindra - Coupon
-Component diagram:
+
+**Component Diagram:**
+
 ![Coupon Component Diagram](images/coupon-component-diagram.png)
-Code diagram:
+
+**Code Diagram:**
+
 ![Coupon Code Diagram](images/coupon-code-diagram.png)
+
+---
+
+### Ghina - Payment Management
+
+**Component Diagram:**
+
+![Component Diagram Payment Management Service](images/Component_Diagram_untuk_Payment_Management_Service.png)
+
+**Code Diagram**
+
+![Code Diagram](images/Code_Diagram.png)
