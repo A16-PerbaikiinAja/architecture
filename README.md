@@ -45,3 +45,14 @@ Setiap service memiliki database PostgreSQL terpisah. Dalam implementasi berbasi
 Layanan seperti ReviewService dan CouponService menerima input berupa teks bebas dari pengguna. Jika input tersebut disimpan tanpa sanitasi dan kemudian ditampilkan kembali ke pengguna lain melalui SPA, maka sistem menjadi rentan terhadap serangan Stored XSS. Hal ini sangat berisiko terutama jika SPA tidak menerapkan penyandian (escape) pada saat render konten.
 
 ## Deliverable Individual
+### Haliza - Review
+Component diagram:
+![Review Component Diagram](images/review-container-diagram.drawio.png)
+Code diagram:
+![Review Code Diagram](images/review-code-diagram.png)
+
+### Kaindra - Coupon
+Component diagram:
+![Coupon Component Diagram](images/coupon-component-diagram.png)
+Code diagram:
+![Coupon Code Diagram](images/coupon-code-diagram.png)
