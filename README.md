@@ -51,7 +51,6 @@ Component diagram:
 Code diagram:
 ![Review Code Diagram](images/review-code-diagram.png)
 
-### Kaindra - Coupon
 Component diagram:
 ![Coupon Component Diagram](images/coupon-component-diagram.png)
 Code diagram:
