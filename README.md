@@ -24,6 +24,14 @@ Software Architecture
 
 ## Deliverable G.2
 
+### Future Container
+
+![Future Container Diagram](images/future_container.png)
+
+### Future Context
+
+![Future Context Diagram](images/future_context.png)
+
 ## Deliverable G.3
 
 ### Risk Analysis untuk Arsitektur yang Diperbarui
